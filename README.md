@@ -52,7 +52,7 @@ El sistema utiliza **Docker & Docker Compose** para orquestar la infraestructura
   ```bash
   docker-compose up -d --scale backend=3
 
-* 5. 🧪 Documentación de Pruebas de Estrés (Stress Testing)
+## 5. 🧪 Documentación de Pruebas de Estrés (Stress Testing)
 Herramienta de Prueba: K6 Testing Framework (stress-test.js).
 
 *Configuración del Escenario:
