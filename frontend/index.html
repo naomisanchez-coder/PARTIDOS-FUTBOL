@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup Predictor 2026</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">? FIFA <span>PREDICTOR</span></div>
+        <div class="user-badge">?? Participante Activo</div>
+    </header>
+
+    <main class="container">
+        <!-- Sección de Salas -->
+        <section class="card-box">
+            <h2>?? Salas y Grupos de Invitación</h2>
+            <div class="group-actions">
+                <input type="text" id="salaNombre" placeholder="Nombre de la sala">
+                <input type="text" id="salaCodigo" placeholder="Código Único (Ej: PERU2026)">
+                <button onclick="crearSala()" class="btn-primary">Crear / Unirse a Sala</button>
+            </div>
+        </section>
+
+        <!-- Grid Principal: Partidos y Leaderboard -->
+        <div class="dashboard-grid">
+            <!-- Partidos / Predicciones -->
+            <section class="card-box matches-section">
+                <h2>?? Próximos Partidos - Mundial</h2>
+                
+                <div class="match-card">
+                    <div class="team">
+                        <span class="flag">????</span>
+                        <span class="team-name">Argentina</span>
+                    </div>
+                    <div class="vs-box">
+                        <input type="number" id="goles-local-1" value="2" min="0">
+                        <span>VS</span>
+                        <input type="number" id="goles-vis-1" value="1" min="0">
+                    </div>
+                    <div class="team">
+                        <span class="flag">????</span>
+                        <span class="team-name">Francia</span>
+                    </div>
+                    <button class="btn-predict" onclick="guardarPrediccion(1)">Guardar Pronóstico</button>
+                </div>
+
+                <div class="match-card">
+                    <div class="team">
+                        <span class="flag">????</span>
+                        <span class="team-name">Brasil</span>
+                    </div>
+                    <div class="vs-box">
+                        <input type="number" id="goles-local-2" value="0" min="0">
+                        <span>VS</span>
+                        <input type="number" id="goles-vis-2" value="0" min="0">
+                    </div>
+                    <div class="team">
+                        <span class="flag">????</span>
+                        <span class="team-name">Alemania</span>
+                    </div>
+                    <button class="btn-predict" onclick="guardarPrediccion(2)">Guardar Pronóstico</button>
+                </div>
+            </section>
+
+            <!-- Tabla de Posiciones -->
+            <section class="card-box leaderboard-section">
+                <h2>?? Tabla de Posiciones</h2>
+                <table class="leader-table">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Usuario</th>
+                            <th>Racha ??</th>
+                            <th>Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-posiciones">
+                        <tr>
+                            <td>?? 1</td>
+                            <td>Naomi Sanchez</td>
+                            <td>3 ??</td>
+                            <td><strong>15 pts</strong></td>
+                        </tr>
+                        <tr>
+                            <td>?? 2</td>
+                            <td>Jaime Farfán</td>
+                            <td>1 ??</td>
+                            <td><strong>10 pts</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
